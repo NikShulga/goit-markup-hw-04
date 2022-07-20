@@ -13,6 +13,7 @@
   --bgcolor-btn: #188ce8;
   --text-title: #ffffff;
   --bgcolor-team: #f5f4fa;
+  --icon-color: #afb1b8;
   /* gap */
   --cadr-gap: 30px;
   --card-item: 4;
@@ -84,22 +85,29 @@ img {
   padding-bottom: 60px;
   background-color: #2f303a;
 }
-/* .footer-list {
+.footer-box {
   display: flex;
-  align-items: center;
-  gap: 9px;
-} */
+  gap: 70px;
+}
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icon {
+  fill: var(--text-title);
+}
 .address {
   font-style: inherit;
   color: rgba(255, 255, 255, 0.6);
 }
-/* .address-link {
-  flex-direction: column;
-} */
-/* .footer .link {
-  display: inline-block;
-  margin-top: 9px;
-} */
+.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--text-title);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
 .address-list {
   display: flex;
   flex-direction: column;
@@ -127,8 +135,9 @@ img {
 }
 .header-contacts {
   display: flex;
+  align-items: center;
   margin-left: auto;
-  gap: 50px;
+  gap: 30px;
 }
 .nav-link,
 .contacts-link {
@@ -136,6 +145,14 @@ img {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+.contacts-icon {
+  margin-right: 10px;
+  fill: var(--text-color);
 }
 .nav {
   display: flex;
@@ -148,7 +165,12 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to left, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-bg.jpg);
   background-color: var(--bgcolor-hero);
 }
 .hero-title {
@@ -191,6 +213,20 @@ img {
   /* max-width: 270px; */
   flex-basis: calc((100% - (var(--card-item) - 1) * var(--cadr-gap)) / var(--card-item));
 }
+.description-list {
+  display: flex;
+  gap: 30px;
+}
+.description-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--bgcolor-team);
+  border-radius: 4px;
+}
 .about {
   padding-top: 0;
 }
@@ -198,6 +234,7 @@ img {
   --card-item: 3;
 }
 .team-card {
+  background-color: var(--text-title);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -222,9 +259,60 @@ img {
   margin-bottom: 10px;
   color: var(--text-color-main);
 }
-/* .team-prof {
-  margin-bottom: 30px;
-} */
+.team .social {
+  margin-top: 16px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--text-title);
+  border-radius: 50%;
+  /* outline: 1px solid red; */
+}
+.team-icon {
+  fill: var(--icon-color);
+}
+.team-icon:hover,
+.team-icon:focus,
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--text-link-act);
+  fill: var(--text-title);
+}
+.client-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--text-link-act);
+}
+.client-icon {
+  fill: var(--icon-color);
+}
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--text-link-act);
+}
 .footer .logo {
   display: block;
   margin-bottom: 20px;
@@ -249,12 +337,11 @@ img {
 .portfolio-list {
   --card-item: 3;
 }
-/* .portfolio-item {
-  box-sizing: border-box;
-  max-width: 100%;
-  height: auto;
-  background: var(--text-title);
-} */
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--bgcolor-btn);
@@ -316,8 +403,11 @@ img {
 .address-link:hover,
 .address-link:focus,
 .contacts-footer:hover,
-.contacts-footer:focus {
+.contacts-footer:focus,
+.contacts-icon:hover,
+.contacts-icon:focus {
   color: var(--text-link-act);
+  fill: var(--text-link-act);
 }
 .current:hover,
 .current:focus,
@@ -325,4 +415,6 @@ img {
 .filter-btn:focus {
   color: #ffffff;
   background-color: var(--text-link-act);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }

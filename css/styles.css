@@ -88,6 +88,7 @@ img {
 .footer-box {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
@@ -105,7 +106,6 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--text-title);
-  margin-top: 12px;
   margin-bottom: 20px;
 }
 .address-list {
@@ -152,7 +152,7 @@ img {
 }
 .contacts-icon {
   margin-right: 10px;
-  fill: var(--text-color);
+  fill: currentColor;
 }
 .nav {
   display: flex;
@@ -221,7 +221,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--bgcolor-team);
@@ -276,10 +275,11 @@ img {
   height: 44px;
   background-color: var(--text-title);
   border-radius: 50%;
+  fill: var(--icon-color);
   /* outline: 1px solid red; */
 }
 .team-icon {
-  fill: var(--icon-color);
+  /* fill: var(--icon-color); */
 }
 .team-icon:hover,
 .team-icon:focus,
@@ -288,31 +288,27 @@ img {
   background-color: var(--text-link-act);
   fill: var(--text-title);
 }
-.client-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
 .client-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  /* width: 170px; */
   height: 92px;
-  border: 1px solid var(--icon-color);
+  border: 1px solid currentColor;
   border-radius: 4px;
+  color: var(--icon-color);
 }
 .client-link:hover,
 .client-link:focus {
-  border: 1px solid var(--text-link-act);
+  color: var(--text-link-act);
 }
 .client-icon {
-  fill: var(--icon-color);
+  fill: currentColor;
 }
-.client-icon:hover,
+/* .client-icon:hover,
 .client-icon:focus {
   fill: var(--text-link-act);
-}
+} */
 .footer .logo {
   display: block;
   margin-bottom: 20px;
@@ -337,8 +333,14 @@ img {
 .portfolio-list {
   --card-item: 3;
 }
-.portfolio-item:hover,
-.portfolio-item:focus {
+.client-list {
+  --card-item: 6;
+}
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -403,9 +405,7 @@ img {
 .address-link:hover,
 .address-link:focus,
 .contacts-footer:hover,
-.contacts-footer:focus,
-.contacts-icon:hover,
-.contacts-icon:focus {
+.contacts-footer:focus {
   color: var(--text-link-act);
   fill: var(--text-link-act);
 }
